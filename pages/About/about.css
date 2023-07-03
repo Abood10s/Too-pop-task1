@@ -1,0 +1,56 @@
+@import "../home/style.css";
+.img-banner {
+    height: 30vh;
+    background-image: url("../../assets/about/banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.balls-img {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 12vh;
+    z-index: -1;
+}
+
+.description {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    margin: 2.5rem auto;
+    padding: 0 2rem;
+}
+
+.people-svg {
+    display: inline-block;
+    object-fit: cover;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+.about-title {
+    border-bottom: 3px solid var(--dark-blue);
+    color: var(--dark-blue);
+    width: fit-content;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+}
+
+.descr {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 85%;
+}
+
+@media only screen and (max-width: 900px) {
+    .description {
+        flex-direction: column;
+    }
+}

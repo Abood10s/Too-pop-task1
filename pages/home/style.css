@@ -1,6 +1,7 @@
 :root {
     --dark-blue: #0F7AD3;
     --light-blue: #4A3AFF;
+    --light-green: #62C2C2;
     --white: #FFFFFF;
     --red: #FF6262;
     --light-grey: #F7F7F7;
@@ -417,6 +418,7 @@ body {
         background-color: var(--dark-blue);
         color: var(--white);
         padding: 1rem;
+        z-index: 98999;
     }
     .links li a {
         color: var(--white);
