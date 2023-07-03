@@ -25,11 +25,24 @@ a {
     list-style: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 1rem 1.5rem;
+}
+
+.actions {
+    display: none;
+}
+
+.close {
+    display: none;
 }
 
 .placeholder {
@@ -43,6 +56,11 @@ a {
     align-items: center;
     gap: 1rem;
     font-weight: bold;
+    transition: all ease 0.2s;
+}
+
+.links li a {
+    transition: all ease 0.2s;
 }
 
 .links li a:hover {
@@ -72,14 +90,19 @@ a {
     justify-content: space-around;
     padding: 0 2rem;
     align-items: center;
-    margin: 2rem auto;
+    margin: 5rem auto;
+}
+
+.hero-img {
+    display: block;
+    height: 65vh;
 }
 
 .desc {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 40%;
+    width: 45%;
 }
 
 .get-started-btn {
@@ -91,7 +114,7 @@ a {
     border: none;
     border-radius: var(--radius);
     font-weight: bold;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .get-started-btn:hover {
@@ -273,6 +296,7 @@ a {
     overflow-x: auto;
     padding: 0 1.5rem;
     gap: 1rem;
+    margin: 1rem auto;
 }
 
 .edu-card p {
@@ -295,22 +319,26 @@ a {
     border-radius: var(--radius);
 }
 
-@media only screen and (max-width: 1100px) {
-    .accordions {
-        grid-template-columns: 1fr;
-    }
-}
-
 .accordion {
     background-color: var(--white);
     padding: 1.7rem 1rem;
     border-radius: var(--radius);
+    transition: all 0.2s ease;
 }
 
 .accordion .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.content {
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.content.show {
+    display: block;
 }
 
 .accordion p {
@@ -329,8 +357,8 @@ a {
     color: var(--white);
 }
 
-#content {
-    height: 0;
+.accordion span {
+    display: none;
 }
 
 .customer-cards {
@@ -348,4 +376,63 @@ a {
     box-shadow: 3px 3px 8px var(--shadow);
     border-radius: var(--radius);
     padding: 0.5rem;
+}
+
+@media only screen and (max-width: 1100px) {
+    .accordions {
+        grid-template-columns: 1fr;
+    }
+    .hero-img {
+        width: 80%;
+        margin: 2rem auto;
+        height: auto;
+    }
+    .desc {
+        width: 80%;
+    }
+    .get-started-btn {
+        align-self: flex-end;
+    }
+    .services-card {
+        margin: 1rem auto;
+    }
+    .projects-nav {
+        width: 50%;
+        margin: 0.5rem auto;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .nav-button {
+        display: none;
+    }
+    .links {
+        position: absolute;
+        right: -110%;
+        bottom: -270%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        background-color: var(--dark-blue);
+        color: var(--white);
+        padding: 1rem;
+    }
+    .links li a {
+        color: var(--white);
+    }
+    .links li a:hover {
+        transform: scale(0.9);
+    }
+    .links.slide {
+        right: 0;
+    }
+    .actions {
+        display: block;
+    }
+    .menu {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+    }
 }
