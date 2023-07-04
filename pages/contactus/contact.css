@@ -1,0 +1,98 @@
+@import "../About/about.css";
+@import "../home/style.css";
+.contact-widgets {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-widget {
+    padding: 0.7rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 1px 1px 20px var(--shadow);
+}
+
+.form-sec {
+    padding: 0.5rem;
+    background-color: var(--light-grey);
+}
+
+.input {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: var(--radius);
+    accent-color: var(--dark-blue);
+}
+
+textarea {
+    padding: 0.7rem;
+    border: none;
+    border-radius: var(--radius);
+    resize: vertical;
+    display: block;
+    width: 97%;
+    margin: auto;
+}
+
+form {
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.send-btn {
+    display: block;
+    margin: 1.5rem auto;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(45deg, var(--light-green) 5%, var(--dark-blue) 95%);
+    font-weight: bold;
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background-position: 144px;
+    transform: scale(1.009);
+}
+
+select {
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 0;
+}
+
+.map {
+    height: 40vh;
+    background-image: url("../../assets/contactus/map.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem 0;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 1170px) {
+    .inputs,
+    .contact-widgets {
+        grid-template-columns: 1fr;
+    }
+    textarea {
+        width: 90%;
+    }
+}

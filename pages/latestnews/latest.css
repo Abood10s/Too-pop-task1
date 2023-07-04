@@ -1,0 +1,13 @@
+@import "../home/style.css";
+@import "../About/about.css";
+.shadow-card {
+    box-shadow: 1px 3px 8px var(--shadow);
+    padding: 1rem;
+}
+
+.shadow-card img {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}

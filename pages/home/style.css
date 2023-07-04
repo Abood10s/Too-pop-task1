@@ -1,12 +1,13 @@
 :root {
+    --shadow: #6a6a6a1b;
     --dark-blue: #0F7AD3;
     --light-blue: #4A3AFF;
     --light-green: #62C2C2;
-    --white: #FFFFFF;
     --red: #FF6262;
     --light-grey: #F7F7F7;
     --soft-blue: #FBFBFF;
-    --shadow: #6a6a6a1b;
+    --white: #FFFFFF;
+    --black: #111;
     --large-font: 28px;
     --medium-font: 16px;
     --small-font: 14px;
@@ -35,7 +36,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
 }
 
 .actions {
@@ -66,6 +67,10 @@ body {
 
 .links li a:hover {
     color: var(--dark-blue);
+}
+
+.black {
+    color: var(--black);
 }
 
 .nav-button {
@@ -158,6 +163,7 @@ body {
     gap: 0.5rem;
     border-radius: var(--radius);
     overflow: hidden;
+    padding: 0 0.4rem;
 }
 
 .services-img {
@@ -186,7 +192,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     font-weight: bold;
 }
 
@@ -196,6 +202,20 @@ body {
 }
 
 .projects-nav p:first-of-type::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+    margin-right: 3px;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-nav p:hover ::after {
     content: "";
     display: inline-block;
     width: 7px;
@@ -286,9 +306,11 @@ body {
     gap: 0.3rem;
 }
 
-.widgets .number {
+.widgets .number,
+.widget-cards .number {
     font-weight: bold;
     font-size: var(--large-font);
+    text-align: center;
 }
 
 .education {
