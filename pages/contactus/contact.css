@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    justify-content: center;
 }
 
 .contact-widget {
@@ -26,6 +27,7 @@
     border: none;
     border-radius: var(--radius);
     accent-color: var(--dark-blue);
+    caret-color: var(--light-green);
 }
 
 textarea {
@@ -34,7 +36,7 @@ textarea {
     border-radius: var(--radius);
     resize: vertical;
     display: block;
-    width: 97%;
+    width: 97.5%;
     margin: auto;
 }
 
@@ -74,11 +76,11 @@ select {
     border: none;
     outline: none;
     border-radius: var(--radius);
-    padding: 0.5rem 0;
+    padding: 0.9rem 0;
 }
 
 .map {
-    width: 100vw;
+    width: 98.5vw;
     filter: grayscale(95%);
     height: 45vh;
     margin: 1rem 0;
@@ -91,5 +93,11 @@ select {
     }
     textarea {
         width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .contact-widget:nth-of-type(3) {
+        align-self: center;
     }
 }
