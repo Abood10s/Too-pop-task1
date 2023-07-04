@@ -78,13 +78,10 @@ select {
 }
 
 .map {
-    height: 40vh;
-    background-image: url("../../assets/contactus/map.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 2rem 0;
     width: 100vw;
+    filter: grayscale(95%);
+    height: 45vh;
+    margin: 1rem 0;
 }
 
 @media only screen and (max-width: 1170px) {
