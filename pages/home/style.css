@@ -26,6 +26,8 @@ li,
 a {
     text-decoration: none;
     list-style: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 body {
@@ -57,7 +59,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
 }
 
 .actions {
@@ -71,7 +73,7 @@ body {
 .placeholder {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .links {
@@ -173,9 +175,11 @@ body {
 
 .services-cards {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat( auto-fit, minmax(220px, 290px));
     padding: 0.5rem 1rem;
-    gap: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 3rem 0;
 }
 
 .services-card {
@@ -184,7 +188,7 @@ body {
     gap: 0.5rem;
     border-radius: var(--radius);
     overflow: hidden;
-    padding: 0 0.4rem;
+    padding: 0.5rem;
     object-fit: cover;
 }
 
@@ -280,30 +284,53 @@ body {
 
 .strategy-cards {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    justify-items: end;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 240px));
+    gap: 2rem;
+    justify-content: center;
     padding: 1rem;
-    width: 85%;
-    margin: auto;
+    width: 90%;
+    margin: 1rem auto;
 }
 
 .strategy-card {
-    box-shadow: 3px 3px 8px var(--shadow);
+    box-shadow: 1px 1px 25px var(--shadow);
     justify-self: self-start;
     padding: 1.2rem;
     border-radius: var(--radius);
+    height: fit-content;
+}
+
+.strategy-card:nth-of-type(even) {
+    margin-top: 2.5rem;
 }
 
 .num {
     text-align: center;
-    background-color: #f79c569c;
-    color: #f79c56;
     border-radius: 50%;
     width: fit-content;
     padding: 1rem 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+
+.num1 {
+    background-color: #E5F4FD;
+    color: var(--dark-blue);
+}
+
+.num2 {
+    background-color: #FFF4EC;
+    color: #F79D56;
+}
+
+.num3 {
+    background-color: #EDFDFF;
+    color: #43CEA2;
+}
+
+.num4 {
+    background-color: #EEEEEE;
+    color: #9C9493;
 }
 
 .ideas {
@@ -345,11 +372,18 @@ body {
 
 .education {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(350px, 1.5fr));
+    grid-template-columns: repeat( auto-fit, minmax(220px, 290px));
+    width: 90%;
     overflow-x: auto;
+    justify-content: center;
     padding: 0 1.5rem;
     gap: 1rem;
     margin: 1rem auto;
+}
+
+.edu-card img {
+    width: 100%;
+    height: auto;
 }
 
 .edu-card p {
@@ -415,10 +449,15 @@ body {
 }
 
 .customer-cards {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    display: flex;
     gap: 1.5rem;
-    padding: 0 0.5rem;
+    padding: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.customer-cards::-webkit-scrollbar {
+    display: none;
 }
 
 .customer-card {
@@ -429,6 +468,8 @@ body {
     box-shadow: 3px 3px 8px var(--shadow);
     border-radius: var(--radius);
     padding: 0.5rem;
+    scroll-snap-align: center;
+    min-width: 47%;
 }
 
 .footer {
@@ -451,8 +492,6 @@ body {
     justify-content: end;
     gap: 3rem;
 }
-
-.footer .top-part .ready-started {}
 
 .footer .middle-part {
     display: grid;
@@ -531,7 +570,7 @@ body {
     .links {
         position: absolute;
         right: -110%;
-        bottom: -270%;
+        top: 85%;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
@@ -541,11 +580,21 @@ body {
         padding: 1rem;
         z-index: 98999;
     }
-    .links li a {
-        color: var(--white);
+    .links li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
     }
-    .links li a:hover {
-        transform: scale(0.9);
+    .links li a {
+        display: block;
+        color: var(--white);
+        width: 100%;
+    }
+    .links li:hover {
+        background-color: var(--white);
+    }
+    .links li:hover a {
+        color: var(--dark-blue);
     }
     .links.slide {
         right: 0;
