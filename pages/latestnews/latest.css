@@ -3,6 +3,10 @@
 .shadow-card {
     box-shadow: 1px 3px 8px var(--shadow);
     padding: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: var(--radius);
 }
 
 .shadow-card img {
@@ -10,4 +14,9 @@
     width: 100%;
     object-fit: cover;
     border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.shadow-card:hover img {
+    transform: scale(1.1);
 }
