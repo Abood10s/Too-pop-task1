@@ -82,6 +82,10 @@
     color: var(--black);
 }
 
+.swiper-slide {
+    padding: 0.2rem !important;
+}
+
 @media only screen and (max-width: 900px) {
     .description {
         flex-direction: column;

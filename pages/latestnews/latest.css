@@ -9,6 +9,25 @@
     border-radius: var(--radius);
 }
 
+.edu-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-card img {
+    width: 100%;
+    height: auto;
+}
+
+.edu-card p {
+    font-weight: bold;
+}
+
+.edu-card span {
+    columns: var(--light-grey);
+    font-size: var(--small-font);
+}
+
 .shadow-card img {
     max-height: 250px;
     width: 100%;

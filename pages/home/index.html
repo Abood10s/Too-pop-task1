@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Italiana&family=Luxurious+Script&family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <title>Home</title>
 </head>
 
@@ -18,28 +22,30 @@
 
     <nav class="navbar">
         <div class="logo">
-            <img src="../../assets/logo.png" alt="logo">
+            <a href="../home/index.html">
+                <img src="../../assets/logo.png" alt="logo">
+            </a>
         </div>
         <div class="placeholder">
 
             <ul class="links">
                 <li>
-                    <a href="../home/index.html">Home</a>
+                    <a href="../home/index.html" class="link">Home</a>
                 </li>
                 <li>
-                    <a href="../About/about.html">About</a>
+                    <a href="../About/about.html" class="link">About</a>
                 </li>
                 <li>
-                    <a href="../services/services.html">Services</a>
+                    <a href="../services/services.html" class="link">Services</a>
                 </li>
                 <li>
-                    <a href="../latestnews/latest.html">
+                    <a href="../latestnews/latest.html" class="link">
                         
                         Latest News
                     </a>
                 </li>
                 <li>
-                    <a href="../contactus/contact.html">Contact Us</a>
+                    <a href="../contactus/contact.html" class="link">Contact Us</a>
                 </li>
             </ul>
 
@@ -146,9 +152,9 @@
             <p>Website Development</p>
             <p>Software</p>
         </div>
-        <div class="our-services">
-            <div class="services-cards">
-                <div class="services-card ">
+        <div class="swiper-container1 swiperfirst">
+            <div class="swiper-wrapper">
+                <div class="services-card swiper-slide">
                     <img class="services-img" src="../../assets/our-projects/1.svg" alt="marketing">
                     <h4>Project Name</h4>
 
@@ -157,14 +163,14 @@
 
 
                 </div>
-                <div class="services-card ">
+                <div class="services-card swiper-slide">
                     <img class="services-img photo-cover" src="../../assets/our-projects/2.svg" alt="marketing">
                     <h4>Project Name</h4>
 
                     <p class="tag">Facebook Ads</p>
 
                 </div>
-                <div class="services-card ">
+                <div class="services-card swiper-slide">
                     <img class="services-img photo-cover" src="../../assets/our-projects/3.svg" alt="marketing">
                     <h4>Project Name</h4>
 
@@ -172,7 +178,7 @@
 
 
                 </div>
-                <div class="services-card">
+                <div class="services-card swiper-slide">
                     <img class="services-img photo-cover" src="../../assets/our-projects/4.svg" alt="marketing">
                     <h4>Project Name</h4>
 
@@ -181,12 +187,9 @@
 
                 </div>
             </div>
-            <div class="tabs">
-                <div> </div>
-                <div> </div>
-                <div> </div>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
+
         <div class="heading">
             <h2>Our Strategy</h2>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor</p>
@@ -241,47 +244,90 @@
             <h2>Happy customer</h2>
             <p>We are proud of our design team</p>
         </div>
-        <div class="customer-cards">
-            <div class="customer-card">
-                <img src="../../assets/people/man1.png" alt="man">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <div class="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
+        <div class="swiper-container2 swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide customer-card">
+                    <img src="../../assets/people/man1.png" alt="man">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
+                </div>
+                <div class="swiper-slide customer-card">
+                    <img src="../../assets/people/woman.png" alt="woman">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
+                </div>
+                <div class="swiper-slide customer-card">
+                    <img src="../../assets/people/man3.png" alt="man">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
+                </div>
+                <div class="swiper-slide customer-card">
+                    <img src="../../assets/people/man1.png" alt="man">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
+                </div>
+                <div class="swiper-slide customer-card">
+                    <img src="../../assets/people/man1.png" alt="man">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
+                </div>
+                <div class="swiper-slide customer-card">
+                    <img src="../../assets/people/woman.png" alt="woman">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
+                </div>
+                <div class="swiper-slide customer-card swiper-c">
+                    <img src="../../assets/people/man3.png" alt="man">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div class="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                        <img src="../../assets/stars/star.png" alt="rating">
+                    </div>
                 </div>
             </div>
-            <div class="customer-card">
-                <img src="../../assets/people/woman.png" alt="woman">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <div class="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                </div>
-            </div>
-            <div class="customer-card">
-                <img src="../../assets/people/man3.png" alt="man">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                <div class="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                    <img src="../../assets/stars/star.png" alt="rating">
-                </div>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
 
-        <div class="tabs">
-            <div> </div>
-            <div> </div>
-            <div> </div>
-        </div>
+
         <div class="heading">
             <h2>Frequently asked questions</h2>
             <p>The service we offer is specifically designed We are proud of our design team
@@ -330,35 +376,43 @@
             <h2>This just happened</h2>
             <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
         </div>
-        <div class="education">
-            <div class="edu-card">
-                <img src="../../assets/edu/1.png" alt="">
-                <p>Techrief is transforming and scaling businesses successfully through services</p>
-                <span class="date">
+        <div class="swiper-container3 swiperr">
+            <div class="swiper-wrapper">
+                <div class="edu-card swiper-slide">
+                    <img src="../../assets/edu/1.png" alt="">
+                    <p>Techrief is transforming and scaling businesses successfully through services</p>
+                    <span class="date">
                     Techrief Oct 20, 2022 
-                </span>
-            </div>
-            <div class="edu-card">
-                <img src="../../assets/edu/2.png" alt="">
-                <p>Techrief is transforming and scaling businesses successfully through services</p>
-                <span class="date">
+                  </span>
+                </div>
+
+                <div class="edu-card swiper-slide">
+                    <img src="../../assets/edu/2.png" alt="">
+                    <p>Techrief is transforming and scaling businesses successfully through services</p>
+                    <span class="date">
                     Techrief Oct 20, 2022 
-                </span>
-            </div>
-            <div class="edu-card">
-                <img src="../../assets/edu/3.png" alt="">
-                <p>Techrief is transforming and scaling businesses successfully through services</p>
-                <span class="date">
+                  </span>
+                </div>
+
+                <div class="edu-card swiper-slide">
+                    <img src="../../assets/edu/3.png" alt="">
+                    <p>Techrief is transforming and scaling businesses successfully through services</p>
+                    <span class="date">
                     Techrief Oct 20, 2022 
-                </span>
-            </div>
-            <div class="edu-card">
-                <img src="../../assets/edu/4.png" alt="">
-                <p>Techrief is transforming and scaling businesses successfully through services</p>
-                <span class="date">
+                  </span>
+
+                </div>
+
+                <div class="edu-card swiper-slide">
+                    <img src="../../assets/edu/4.png" alt="">
+                    <p>Techrief is transforming and scaling businesses successfully through services</p>
+                    <span class="date">
                     Techrief Oct 20, 2022 
-                </span>
+                  </span>
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
+
         </div>
     </main>
     <footer class="footer">
@@ -397,12 +451,10 @@
                         <img src="../../assets/footer/i1.png" alt="phone" />
 
                         <h5>Address:</h5>
-                        <p>28 Division St, New York, NY 10002, USA</p>
+                        <p>28 Division St, New York</p>
                     </div>
                     <div class="contact-widgett">
                         <img src="../../assets/footer/i3.png" alt="phone" />
-
-
 
                         <h5>Email:</h5>
                         <p>Startnext@Gmail.Com</p>
@@ -429,7 +481,48 @@
             </div>
         </div>
     </footer>
+
+
+
+    <script src="../../swipers.js"></script>
     <script src="../../main.js"></script>
+    <script>
+        const swiper1 = new Swiper(".swiper-container2", {
+            // Optional parameters
+            direction: "horizontal",
+            loop: false,
+            speed: 500,
+            spaceBetween: 100,
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 10,
+                slideShadows: false,
+            }, // If we need pagination
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>

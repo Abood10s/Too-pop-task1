@@ -30,6 +30,11 @@ a {
     transition: all 0.2s ease;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -82,6 +87,25 @@ body {
     gap: 1rem;
     font-weight: bold;
     transition: all ease 0.2s;
+}
+
+.links li {
+    position: relative;
+    transition: all ease 0.2s;
+}
+
+.links li::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0px;
+    background-color: var(--dark-blue);
+    bottom: -10%;
+    left: 0;
+}
+
+.links li:hover ::after {
+    width: 100%;
 }
 
 .links li a {
@@ -343,6 +367,28 @@ body {
     margin-bottom: 1rem;
 }
 
+.swiper-container {
+    width: 75%;
+    padding: 1rem 0;
+}
+
+.swiper-slide {
+    gap: 2rem;
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    margin: 2rem 0.5rem;
+    width: 50%;
+}
+
+.swiper-pagination {
+    margin: -0.4rem 0;
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+
 .company-facts {
     background-color: var(--soft-blue);
     width: 95%;
@@ -359,6 +405,29 @@ body {
     margin: 5rem 0;
 }
 
+.swiper-container {
+    height: 100%;
+    max-height: 100vw;
+    min-height: 0;
+    min-width: 0;
+    max-width: 100vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: block;
+    height: 100%;
+    max-height: 100%;
+}
+
+.swiper-wrapper {
+    max-height: 100%;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+}
+
 .widget {
     display: flex;
     flex-direction: column;
@@ -373,29 +442,12 @@ body {
     text-align: center;
 }
 
-.education {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(220px, 290px));
-    width: 90%;
-    overflow-x: auto;
-    justify-content: center;
-    padding: 0 1.5rem;
-    gap: 1rem;
-    margin: 1rem auto;
-}
-
-.edu-card img {
-    width: 100%;
-    height: auto;
-}
-
-.edu-card p {
-    font-weight: bold;
-}
-
-.edu-card span {
-    columns: var(--light-grey);
-    font-size: var(--small-font);
+.swiper-pagination .swiper-pagination-bullet {
+    width: 35px;
+    height: 4px;
+    background-color: var(--dark-blue);
+    margin: 0 5px;
+    border-radius: 4px;
 }
 
 .accordions {
@@ -431,6 +483,10 @@ body {
     display: block;
 }
 
+.swiper1 {
+    margin: 0.5rem auto;
+}
+
 .accordion p {
     display: grid;
     place-items: center;
@@ -451,28 +507,8 @@ body {
     display: none;
 }
 
-.customer-cards {
-    display: flex;
-    gap: 1.5rem;
-    padding: 0.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.customer-cards::-webkit-scrollbar {
-    display: none;
-}
-
 .customer-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    box-shadow: 3px 3px 8px var(--shadow);
-    border-radius: var(--radius);
-    padding: 0.5rem;
-    scroll-snap-align: center;
-    min-width: 47%;
+    box-shadow: 1px 1px 28px var(--shadow);
 }
 
 .footer {
@@ -594,6 +630,17 @@ body {
     gap: 1.5rem;
 }
 
+.education {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(220px, 290px));
+    width: 90%;
+    overflow-x: auto;
+    justify-content: center;
+    padding: 0 1.5rem;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
 @media only screen and (max-width: 1100px) {
     .accordions {
         grid-template-columns: 1fr;
@@ -625,8 +672,8 @@ body {
     }
     .links {
         position: absolute;
-        right: -110%;
-        top: 85%;
+        left: 0;
+        top: -1000%;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
@@ -635,6 +682,7 @@ body {
         color: var(--white);
         padding: 1rem;
         z-index: 98999;
+        backdrop-filter: blur(10px);
     }
     .links li {
         width: 100%;
@@ -653,7 +701,7 @@ body {
         color: var(--dark-blue);
     }
     .links.slide {
-        right: 0;
+        top: 87%;
     }
     .actions {
         display: block;

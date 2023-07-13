@@ -81,7 +81,7 @@ select {
 
 .map {
     width: 98.5vw;
-    filter: grayscale(95%);
+    /* filter: grayscale(95%); */
     height: 45vh;
     margin: 1rem 0;
 }
